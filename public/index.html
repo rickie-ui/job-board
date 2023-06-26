@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="master.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- JQuery -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    ></script>
+    <!-- Data tables -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"
+    />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js"
+    ></script>
+
+    <!-- Custom js -->
+    <script defer src="app.js"></script>
+    <title>Index</title>
+  </head>
+  <body class="antialiased">
+    <section class="w-full flex">
+      <!-- navigation -->
+      <div class="w-1/6 h-screen relative bg-[#2E3539] text-white">
+        <div class="flex justify-between items-center px-4 my-6">
+          <div class="h-10 w-10 rounded-full border-8 border-[#AFC246]"></div>
+          <span class="text-2xl"
+            ><i class="fa fa-align-right opacity-50"></i
+          ></span>
+        </div>
+
+        <form
+          action="#"
+          method="get"
+          class="w-full flex justify-center opacity-60 font-semibold"
+        >
+          <input
+            type="search"
+            name="search"
+            placeholder="Search..."
+            class="rounded-3xl px-4 py-2 bg-[#454C51] placeholder-white border-0 outline-none"
+          />
+        </form>
+
+        <aside class="flex flex-col w-11/12 mx-auto mt-24 opacity-80">
+          <a
+            href="#"
+            class="w-full hover:bg-[#454C51] space-x-2 py-2 rounded-md px-4"
+            ><i class="fa fa-dashboard"></i><span>Dashboard</span></a
+          >
+          <a href="#" class="w-full bg-[#454C51] space-x-2 py-2 rounded-md px-4"
+            ><i class="fa fa-users"></i><span>Applicants</span>
+            <p
+              class="rounded-full bg-[#F6B85B] h-6 w-6 float-right text-xs p-2 flex justify-center items-center text-[#454C51] font-bold"
+            >
+              3
+            </p>
+          </a>
+          <a
+            href="#"
+            class="w-full hover:bg-[#454C51] space-x-2 py-2 rounded-md px-4"
+            ><i class="fa fa-briefcase"></i><span>Jobs</span></a
+          >
+          <a
+            href="#"
+            class="w-full hover:bg-[#454C51] space-x-2 py-2 rounded-md px-4"
+            ><i class="fa fa-calendar"></i><span>Calendar</span></a
+          >
+          <a
+            href="#"
+            class="w-full hover:bg-[#454C51] space-x-2 py-2 rounded-md px-4"
+            ><i class="fa fa-bar-chart"></i><span>Reports</span></a
+          >
+        </aside>
+
+        <div class="sticky top-full">
+          <div class="flex justify-between items-center px-4 my-4">
+            <a href="#" class="rounded-full">
+              <img
+                src="https://images.unsplash.com/photo-1604957393212-7feb8d5c652e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt="avatar"
+                class="h-8 w-8 rounded-full object-cover border-2 border-teal-500"
+              />
+              <a
+                href="#"
+                class="absolute left-11 h-3 w-3 opacity-70 flex justify-center items-center text-[#2E3539] rounded-full bg-white"
+                ><i class="fa fa-angle-down"></i
+              ></a>
+            </a>
+            <div class="opacity-60"><i class="fa fa-bell"></i></div>
+            <a href="#"><i class="fa fa-sign-out opacity-60"></i></a>
+          </div>
+          <div
+            class="flex justify-between items-center bg-[#454C51] h-10 px-4 py-8"
+          >
+            <div
+              class="h-8 w-8 flex justify-center items-center rounded-full bg-blue-400"
+            >
+              <i class="fa fa-heartbeat"></i>
+            </div>
+            <h4 class="opacity-60 capitalize text-sm font-semibold">
+              Cherstain Inc
+            </h4>
+            <i class="fa fa-caret-down opacity-40"></i>
+          </div>
+        </div>
+      </div>
+      <!-- filter -->
+      <div class="w-1/6 h-screen bg-[#FAFAFA] text-[#454C51] opacity-60">
+        <h3 class="uppercase my-6 px-4 font-semibold">filters</h3>
+
+        <h4 class="capitalize text-sm mb-2 px-4 font-bold">
+          Type of employment
+        </h4>
+        <div class="px-6">
+          <input type="checkbox" id="J1" name="J1" />
+          <label for="J1"> Full-time</label><br />
+          <input type="checkbox" id="J2" name="J2" />
+          <label for="J2"> Part-time</label><br />
+          <input type="checkbox" id="J3" name="J3" />
+          <label for="J3"> Contract</label><br />
+          <input type="checkbox" id="J4" name="J4" />
+          <label for="J4"> Temporary</label><br />
+          <input type="checkbox" id="J5" name="J5" />
+          <label for="J5"> Internship</label><br />
+        </div>
+
+        <hr class="mx-8 my-4" />
+
+        <h4 class="capitalize text-sm mb-2 px-4 font-bold">Experince level</h4>
+        <div class="px-6">
+          <input type="checkbox" id="E1" name="E1" />
+          <label for="E1"> Internship</label><br />
+          <input type="checkbox" id="E2" name="E2" />
+          <label for="E2"> Entry-level</label><br />
+          <input type="checkbox" id="E3" name="E3" />
+          <label for="E3"> Associate</label><br />
+          <input type="checkbox" id="E4" name="E4" />
+          <label for="E4"> Mid-Senior</label><br />
+          <input type="checkbox" id="E5" name="E5" />
+          <label for="E5"> Senior</label><br />
+        </div>
+
+        <hr class="mx-8 my-4" />
+
+        <h4 class="capitalize text-sm mb-2 px-4 font-bold">Place of work</h4>
+        <div class="px-6">
+          <input type="checkbox" id="P1" name="P1" />
+          <label for="P1"> On-Site</label><br />
+          <input type="checkbox" id="P2" name="P2" />
+          <label for="P2"> Hybrid</label><br />
+          <input type="checkbox" id="P3" name="P3" />
+          <label for="P3"> Remote</label><br />
+        </div>
+      </div>
+
+      <!-- Applicants table -->
+      <div class="w-2/3 h-screen">
+        <section class="flex justify-between items-center mt-10 mx-10">
+          <h2 class="font-semibold text-xl">Applicants</h2>
+          <div class="font-semibold">
+            <a href="#" class="bg-gray-300 px-4 py-2 opacity-40 rounded-md"
+              ><i class="fa fa-download"></i>&emsp;CSV Import</a
+            >
+            <a href="#" class="bg-[#44C174] px-4 py-2 text-white rounded-md"
+              ><i class="fa fa-plus"></i>&emsp;Add Candidate</a
+            >
+          </div>
+        </section>
+
+        <hr class="mx-10 my-10" />
+
+        <div class="mx-10 text-xs">
+          <table class="display" id="table1">
+            <thead>
+              <tr class="opacity-40 uppercase">
+                <th>Applicant</th>
+                <th>Applied On</th>
+                <th>Phone No</th>
+                <th>Progress</th>
+                <th>Rating</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="font-semibold">
+                <td>Daniel Gallager</td>
+                <td>07/02/2019</td>
+                <td>319-010-4257</td>
+                <td>progress bars</td>
+                <td>Stars</td>
+                <td>
+                  <i
+                    class="fa fa-ellipsis-h rounded-full opacity-40 text-md"
+                  ></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
